@@ -73,7 +73,7 @@ Klon projektet:
 
 Navigér til https://localhost:portnummer (port fremgår af terminalen ved start)
 
-📊 Git-kommandoer jeg har brugt
+📊 Git-kommandoer jeg brugt
 
 - git init
 - git add .
