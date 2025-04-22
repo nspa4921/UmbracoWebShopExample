@@ -2,7 +2,7 @@
 
 **Case: Umbraco / Frontend Developer**
 
-Dette projekt er en mini-moderne produktside bygget med **Umbraco CMS (v15.3.1)** og **Tailwind CSS** som en del af en caseopgave.
+Dette projekt er en mini produktside bygget med **Umbraco CMS (v15.3.1)** og **Tailwind CSS** som en del af en caseopgave.
 ---
 
 ## 🛠️ Brugt teknologi
