@@ -1,0 +1,23 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var children = Umbraco.Content(Model.Id).Children().Where(x => x.ContentType.Alias == "produkt");
+}
+
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    @foreach (var product in children)
+    {
+        <div class="border p-4 rounded shadow">
+            <h2 class="text-xl font-semibold mb-2">@product.Value("produktnavn")</h2>
+            <p class="text-gray-700">@product.Value("beskrivelse")</p>
+            <p class="text-green-700 font-bold mt-2">@product.Value("pris") DKK</p>
+            @{
+                var image = product.Value<Umbraco.Cms.Core.Models.MediaWithCrops>("produkbillede");
+                if (image != null)
+                {
+                    <img src="@image.MediaUrl()" alt="Billede af produkt" class="mt-3 rounded" />
+                }
+            }
+        </div>
+    }
+</div>
